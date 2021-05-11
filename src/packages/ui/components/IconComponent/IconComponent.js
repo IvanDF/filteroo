@@ -47,22 +47,6 @@ export const IconComponent = (props) => {
           )}
         </svg>
       );
-    case "CHEVRON_RIGHT":
-      return (
-        <svg
-          width={props.width}
-          height={props.height}
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill={props.primaryColor}
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M10.7197 7.4697C10.4268 7.7626 10.4268 8.2374 10.7197 8.5303L14.1893 12L10.7197 15.4697C10.4268 15.7626 10.4268 16.2374 10.7197 16.5303C11.0126 16.8232 11.4874 16.8232 11.7803 16.5303L15.7803 12.5303C16.0732 12.2374 16.0732 11.7626 15.7803 11.4697L11.7803 7.4697C11.4874 7.1768 11.0126 7.1768 10.7197 7.4697Z"
-          />
-        </svg>
-      );
     case "BRIGHTNESS":
       return (
         <svg
@@ -170,7 +154,7 @@ export const IconComponent = (props) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0)">
+          <g clipPath="url(#clip0)">
             <path
               d="M5.00001 0.625004C6.05183 0.625063 7.06804 1.00606 7.86064 1.6975L1.69751 7.86063C0.114172 6.04002 0.306536 3.28057 2.12714 1.69723C2.92376 1.00446 3.94429 0.623559 5.00001 0.625004Z"
               fill={props.primaryColor}
@@ -251,8 +235,8 @@ export const IconComponent = (props) => {
           <path
             d="M3 1L7 5L3 9"
             stroke={props.primaryColor}
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       );
@@ -268,8 +252,29 @@ export const IconComponent = (props) => {
           <path
             d="M9 3L5 7L1 3"
             stroke={props.primaryColor}
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "UNDO":
+      return (
+        <svg
+          width={props.width}
+          height={props.height}
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.02086 4.16666H0.3125C0.139999 4.16666 0 4.02666 0 3.85416V1.14587C0 0.973373 0.139999 0.833374 0.3125 0.833374C0.485001 0.833374 0.625 0.973373 0.625 1.14587V3.54166H3.02086C3.19336 3.54166 3.33336 3.68166 3.33336 3.85416C3.33336 4.02666 3.19336 4.16666 3.02086 4.16666Z"
+            fill={props.primaryColor}
+            fillOpacity="0.9"
+          />
+          <path
+            d="M5 10C3.66501 10 2.40959 9.4796 1.46545 8.53455C1.3433 8.41248 1.3433 8.21457 1.46545 8.0925C1.5879 7.96997 1.78581 7.97081 1.9075 8.0925C2.73376 8.9196 3.83163 9.375 5 9.375C7.41249 9.375 9.375 7.41249 9.375 5C9.375 2.58751 7.41249 0.625 5 0.625C2.93251 0.625 1.08871 2.01462 0.616223 3.92914C0.574567 4.09706 0.406262 4.19914 0.237881 4.15794C0.0704162 4.11629 -0.0316651 3.94707 0.00915212 3.7796C0.55 1.5892 2.64877 0 5 0C7.75711 0 10 2.24289 10 5C10 7.75711 7.75711 10 5 10Z"
+            fill={props.primaryColor}
+            fillOpacity="0.9"
           />
         </svg>
       );

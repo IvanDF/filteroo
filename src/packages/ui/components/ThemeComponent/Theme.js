@@ -1,10 +1,10 @@
 export const Theme = {
-  colors: {
-    //Color HEX
+  color: {
+    //Colors HEX
     black: "#000000",
     whithe: "#ffffff",
     primmary: "#EAE2B7",
-    cinfitrm: "#FCBF49",
+    cta: "#FCBF49",
     warnng: "#F77F00",
     danger: "#D62828",
     bg: "#003049",
@@ -15,7 +15,6 @@ export const Theme = {
     o9: 0.9,
     o8: 0.8,
     o7: 0.7,
-    oo5: 0.05,
     o6: 0.6,
     o5: 0.5,
     o4: 0.4,
@@ -27,15 +26,13 @@ export const Theme = {
 
   font: {
     //Size
-    s12: "12px",
-    s14: "14px",
+    s14: "14px", // DA VEDERE
     s16: "16px",
-    s20: "20px",
-    s24: "24px",
-    s34: "34px",
+    s22: "22px",
+    s36: "36px",
 
     //Weight
     w400: 400,
-    w500: 500,
+    w700: 700,
   },
 };
