@@ -1,6 +1,5 @@
 export * from "./components/IconComponent/IconComponent";
 export * from "./components/ThemeComponent/Theme";
-// export * from "./Components/ImageComponent/ImageComponent";
-// export * from "./Components/InputComponent/InputComponent";
-// export * from "./Components/TypographyComponent/TypographyComponent";
-//
+export * from "./components/ButtonComponent/ButtonComponent";
+export * from "./components/RgbaComponent/Rgba";
+export * from "./components/ImageComponent/ImageComponent";

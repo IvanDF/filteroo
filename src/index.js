@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import { ProvaModificatore } from "./packages/provaModificatore";
 import { TypographyComponent } from "./packages/ui/components/TypographyComponent/TypographyComponent";
-import { IconComponent, Theme } from "./packages/ui/index";
+import { ButtonComponent, IconComponent, Theme } from "./packages/ui/index";
 
 const Title = styled.div`
   display: block;
@@ -43,7 +44,10 @@ ReactDOM.render(
     >
       SPEREM
     </TypographyComponent>
-    <input placeholder="cilo"></input>
+    <ButtonComponent bgColor={Theme.color.warnng} isUpper={true}>
+      scarica
+    </ButtonComponent>
+    <ProvaModificatore />
   </React.StrictMode>,
   document.getElementById("root")
 );
