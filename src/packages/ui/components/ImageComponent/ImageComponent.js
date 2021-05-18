@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const Image = styled.img`
   display: block;
-  height: 500px;
-  width: auto;
+  object-fit: contain;
   filter: ${({ filter }) =>
     filter &&
     filter.map((el) => {
