@@ -44,8 +44,17 @@ const Input = styled.input`
   height: 100%;
   background: none;
   appearance: none;
-  &::-webkit-slider-thumb,
-  ::-moz-range-thumb {
+  &::-moz-range-thumb {
+    appearance: none;
+    border: none;
+    width: 5px;
+    height: 40px;
+    border-radius: 25px;
+    background: ${Rgba(Theme.color.cta, Theme.opacity.o9)};
+    box-shadow: 0px 4px 4px ${Rgba(Theme.color.bg, Theme.opacity.o5)};
+    cursor: move;
+  }
+  &::-webkit-slider-thumb {
     appearance: none;
     border: none;
     width: 5px;
