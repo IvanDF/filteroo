@@ -3,7 +3,7 @@ export const Theme = {
     //Colors HEX
     black: "#000000",
     whithe: "#ffffff",
-    primmary: "#EAE2B7",
+    primary: "#EAE2B7",
     cta: "#FCBF49",
     warnng: "#F77F00",
     danger: "#D62828",

@@ -223,7 +223,7 @@ export const IconComponent = (props) => {
           />
         </svg>
       );
-    case "CHEVRON_RIGHT":
+    case "CHEVRON":
       return (
         <svg
           width={props.width}
@@ -234,23 +234,6 @@ export const IconComponent = (props) => {
         >
           <path
             d="M3 1L7 5L3 9"
-            stroke={props.primaryColor}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      );
-    case "CHEVRON_DOWN":
-      return (
-        <svg
-          width={props.width}
-          height={props.height}
-          viewBox="0 0 10 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9 3L5 7L1 3"
             stroke={props.primaryColor}
             strokeLinecap="round"
             strokeLinejoin="round"

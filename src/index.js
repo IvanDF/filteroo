@@ -4,7 +4,12 @@ import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { ProvaModificatore } from "./packages/provaModificatore";
 import { TypographyComponent } from "./packages/ui/components/TypographyComponent/TypographyComponent";
-import { ButtonComponent, IconComponent, Theme } from "./packages/ui/index";
+import {
+  ButtonComponent,
+  DropdownComponent,
+  IconComponent,
+  Theme,
+} from "./packages/ui/index";
 
 const Title = styled.div`
   display: block;
@@ -28,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
+    <DropdownComponent></DropdownComponent>
     <Title>Ciao</Title>
     <IconComponent
       name="B&W"
