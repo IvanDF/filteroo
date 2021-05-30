@@ -1,15 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import App from "./packages/app/App";
 import { createGlobalStyle } from "styled-components";
-import { ProvaModificatore } from "./packages/provaModificatore";
-import { TypographyComponent } from "./packages/ui/components/TypographyComponent/TypographyComponent";
-import {
-  ButtonComponent,
-  DropdownComponent,
-  IconComponent,
-  Theme,
-} from "./packages/ui/index";
 
 const Title = styled.div`
   display: block;
@@ -33,27 +26,7 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <DropdownComponent></DropdownComponent>
-    <Title>Ciao</Title>
-    <IconComponent
-      name="B&W"
-      width={24}
-      height={24}
-      primaryColor={Theme.color.black}
-      // secondaryColor="black"
-    />
-    <TypographyComponent
-      color={Theme.color.danger}
-      fontSize={Theme.font.s36}
-      fontWeight={Theme.font.w700}
-      margin={[0, 4, 2, 1]}
-    >
-      SPEREM
-    </TypographyComponent>
-    <ButtonComponent bgColor={Theme.color.warnng} isUpper={true}>
-      scarica
-    </ButtonComponent>
-    <ProvaModificatore />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -6,3 +6,4 @@ export * from "./components/ImageComponent/ImageComponent";
 export * from "./components/DropdownComponent/DropdownComponent";
 export * from "./components/InputRangeComponent/InputRangeComponent";
 export * from "./components/TypographyComponent/TypographyComponent";
+export * from "./components/InputComponent/InputComponent";

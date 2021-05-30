@@ -2,10 +2,10 @@ export const Theme = {
   color: {
     //Colors HEX
     black: "#000000",
-    whithe: "#ffffff",
+    white: "#ffffff",
     primary: "#EAE2B7",
     cta: "#FCBF49",
-    warnng: "#F77F00",
+    warning: "#F77F00",
     danger: "#D62828",
     bg: "#003049",
   },
