@@ -25,7 +25,7 @@ const IconWrapper = styled.div`
   svg {
     position: relative;
     top: 2px;
-    transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 250ms;
+    transition: transform ${Theme.transition.bouncing} 250ms;
     ${({ isOpen }) => isOpen && "transform: rotate(90deg)"}
   }
 `;
@@ -50,7 +50,7 @@ const DropdownBody = styled.div`
   align-items: center;
   margin: ${({ isOpen }) => isOpen && "5px 0"};
   height: ${({ isOpen }) => (isOpen ? "50px" : "0")};
-  transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275) 250ms;
+  transition: height ${Theme.transition.bouncing} 250ms;
   overflow: hidden;
 `;
 
@@ -76,7 +76,7 @@ export const DropdownComponent = (props) => {
           height={14}
           width={14}
           primaryColor={Theme.color.primary}
-        ></IconComponent>
+        />
       </IconWrapper>
       <Dropdown>
         <DropdownHeader>

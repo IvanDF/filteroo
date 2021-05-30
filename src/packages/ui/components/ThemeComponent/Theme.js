@@ -35,4 +35,9 @@ export const Theme = {
     w400: 400,
     w700: 700,
   },
+
+  transition: {
+    //Animations
+    bouncing: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+  },
 };
