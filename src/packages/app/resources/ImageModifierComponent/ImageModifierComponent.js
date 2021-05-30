@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { ImageComponent } from "../../../ui";
 
 const Wrapper = styled.div``;
 
-export const ImageModifierComponent = () => {
-  const [imageUploaded, setImageUploaded] = useState(false);
+const Image = styled.img``;
+
+export const ImageModifierComponent = (props) => {
+  // const [imageUploaded, setImageUploaded] = useState(false);
   return (
-    <Wrapper>{imageUploaded ? <div>uploaded</div> : <div>upload</div>}</Wrapper>
+    <Wrapper>
+      <Image src={props.img} />
+    </Wrapper>
   );
 };

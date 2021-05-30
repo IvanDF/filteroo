@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   TypographyComponent,
   InputComponent,
   IconComponent,
   Theme,
 } from "../../../ui";
-import { Rgba } from "../../../../../../../Documents/filteroo/src/packages/ui";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -24,19 +23,21 @@ const Wrapper = styled.div`
 `;
 
 const LabelWrapper = styled.div`
-  padding: 100px 150px;
-  border: 5px dashed ${Rgba(Theme.color.primary, Theme.opacity.o8)};
+  padding: 120px 170px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='60' ry='60' stroke='%23EAE2B7FF' stroke-width='8' stroke-dasharray='30%2c 30' stroke-dashoffset='36' stroke-miterlimit='1' stroke-linecap='square' stroke-linejoin='round' /%3e%3c/svg%3e");
   border-radius: 60px;
 `;
 
-export const ImageUploaderComponent = () => {
+export const ImageUploaderComponent = (props) => {
   const [imageUpload, setImageUpload] = useState("");
   let imageHandler = (e) => {
-    let image = e.target.files[0];
-    let img = URL.createObjectURL(image);
-    setImageUpload(img);
-    console.log(img);
+    setImageUpload(e);
   };
+
+  useEffect(() => {
+    props.change(imageUpload);
+    console.log(imageUpload);
+  }, [props, imageUpload]);
 
   return (
     <Wrapper>
@@ -56,7 +57,7 @@ export const ImageUploaderComponent = () => {
             <TypographyComponent
               color={Theme.color.warnng}
               colorHovered={Theme.color.whithe}
-              fontSize={Theme.font.s36}
+              fontSize={Theme.font.s32}
               fontWeight={Theme.font.w700}
               pointer={true}
             >

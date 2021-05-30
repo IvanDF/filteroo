@@ -11,9 +11,24 @@ const AppWrapper = styled.main`
 
 const App = () => {
   const [imageUploaded, setImageUploaded] = useState(false);
+  const [imageUpload, setImageUpload] = useState("");
+
+  let ImageHandler = (e) => {
+    if (e) {
+      e && setImageUploaded(!imageUploaded);
+      let image = e.target.files[0];
+      let img = URL.createObjectURL(image);
+      setImageUpload(img);
+    }
+  };
+
   return (
     <AppWrapper>
-      {imageUploaded ? <ImageModifierComponent /> : <ImageUploaderComponent />}
+      {imageUploaded ? (
+        <ImageModifierComponent img={imageUpload} />
+      ) : (
+        <ImageUploaderComponent change={ImageHandler} />
+      )}
     </AppWrapper>
   );
 };

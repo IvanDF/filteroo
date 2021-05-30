@@ -29,7 +29,7 @@ export const Theme = {
     s14: "14px", // DA VEDERE
     s16: "16px",
     s22: "22px",
-    s36: "36px",
+    s32: "32px",
 
     //Weight
     w400: 400,

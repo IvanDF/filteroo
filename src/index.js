@@ -1,13 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
 import App from "./packages/app/App";
 import { createGlobalStyle } from "styled-components";
 
-const Title = styled.div`
-  display: block;
-  background-color: red;
-`;
 const GlobalStyle = createGlobalStyle`
   *,
   *::before,
