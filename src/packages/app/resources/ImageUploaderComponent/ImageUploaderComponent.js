@@ -15,7 +15,6 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background: ${Theme.color.bg};
   color: ${Theme.color.primary};
   input {
     opacity: ${Theme.opacity.o0};

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { ImageModifierComponent, ImageUploaderComponent } from "./resources";
+import { Theme } from "../ui";
 
 const AppWrapper = styled.main`
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background: ${Theme.color.bg};
 `;
 
 const App = () => {
