@@ -52,6 +52,7 @@ export const ImageUploaderComponent = (props) => {
       <InputComponent
         name="imageUploader"
         type="file"
+        accept="image/png, image/gif, image/jpeg"
         onChange={imageHandler}
         opacity={Theme.opacity.o0}
         label={

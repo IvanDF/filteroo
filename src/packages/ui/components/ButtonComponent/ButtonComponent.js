@@ -5,7 +5,7 @@ import { Rgba } from "../RgbaComponent/Rgba";
 const Button = styled.button`
   color: ${Rgba(Theme.color.bg, Theme.opacity.o5)};
   background: ${({ bgColor }) => (bgColor ? bgColor : Theme.color.cta)};
-  padding: 10px 20px;
+  padding: 5px 20px;
   border: none;
   ${({ fullWidth }) => fullWidth && "width: 100%"};
   border-radius: 10px;

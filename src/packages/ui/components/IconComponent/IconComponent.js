@@ -32,6 +32,7 @@ export const IconComponent = (props) => {
           onMouseLeave={iconHoverHandler}
           width={props.width}
           height={props.height}
+          onClick={props.onClick}
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
