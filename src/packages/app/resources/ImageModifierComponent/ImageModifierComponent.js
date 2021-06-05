@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { ImageComponent } from "../../../ui";
 import Navbar from "./assets/Navbar";
+import { SidebarModifier } from "./assets/SidebarModifier";
 
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between;
+  align-items: center; */
   flex-direction: column;
 `;
 
@@ -20,9 +22,10 @@ const Header = styled.header`
 `;
 
 const Body = styled.div`
-  height: ${({ headerHeight }) => `calc(100% - ${headerHeight}px)`};
+  max-height: ${({ headerHeight }) => `calc(100% - ${headerHeight}px)`};
   width: 100%;
   display: flex;
+  flex-grow: 1;
   /* justify-content: space-between;
   align-items: center; */
 `;
@@ -35,15 +38,11 @@ const ImageWrapper = styled.div`
   justify-content: center;
 `;
 
-const Image = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-`;
-
 const InputsWrapper = styled.aside`
+  display: flex;
+  justify-content: center;
   height: 100%;
-  width: 250px;
+  width: 450px;
   max-width: 100%;
 `;
 
@@ -56,9 +55,11 @@ export const ImageModifierComponent = (props) => {
       </Header>
       <Body headerHeight={headerHeight}>
         <ImageWrapper>
-          <Image src={props.img} />
+          <ImageComponent src={props.img} />
         </ImageWrapper>
-        <InputsWrapper></InputsWrapper>
+        <InputsWrapper>
+          <SidebarModifier src={props.img} />
+        </InputsWrapper>
       </Body>
     </Wrapper>
   );
