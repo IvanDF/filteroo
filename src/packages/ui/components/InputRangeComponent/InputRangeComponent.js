@@ -67,17 +67,16 @@ const Input = styled.input`
 `;
 
 export const InputRangeComponent = (props) => {
-  console.log(props.cristo, "DAL RANGE");
   return (
     <Wrapper>
       <ImageWrapper>
-        {/* <ImageComponent src={props.cristo} />
-        <ImageComponent src={props.cristo} />
-        <ImageComponent src={props.cristo} />
-        <ImageComponent src={props.cristo} />
-        <ImageComponent src={props.cristo} /> */}
+        <ImageComponent src={props.img} />
+        <ImageComponent src={props.img} />
+        <ImageComponent src={props.img} />
+        <ImageComponent src={props.img} />
+        <ImageComponent src={props.img} />
       </ImageWrapper>
-      <Input type="range" />
+      <Input type="range" onChange={props.onChange} />
     </Wrapper>
   );
 };

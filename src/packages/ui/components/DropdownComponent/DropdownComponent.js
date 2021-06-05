@@ -91,16 +91,14 @@ export const DropdownComponent = (props) => {
               color={Theme.color.primary}
               fontSize={Theme.font.s14}
             >
-              Luce
+              {props.typeName}
             </TypographyComponent>
           </DropdownTitle>
           <DropdownUndo>
             <IconComponent name="UNDO" height={14} width={14}></IconComponent>
           </DropdownUndo>
         </DropdownHeader>
-        <DropdownBody isOpen={isOpen}>
-          <InputRangeComponent />
-        </DropdownBody>
+        <DropdownBody isOpen={isOpen}>{props.children}</DropdownBody>
       </Dropdown>
     </Wrapper>
   );

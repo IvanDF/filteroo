@@ -47,7 +47,6 @@ const Navbar = (props) => {
         placeholder={"Inserisci Nome immagine"}
         onChange={(e) => {
           setImageTitle(e.target.value);
-          console.log(imageTitle);
         }}
       />
       <Download href={props.download} download={imageTitle}>

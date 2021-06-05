@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ImageComponent } from "../../../ui";
 import Navbar from "./assets/Navbar";
@@ -48,6 +48,26 @@ const InputsWrapper = styled.aside`
 
 export const ImageModifierComponent = (props) => {
   const headerHeight = 50;
+
+  const [hueRange, setHueRange] = useState(0);
+  const [brightness, setBrightness] = useState(100);
+  const [grayscaleRange, setGrayscaleRange] = useState(0);
+
+  const filterList = [
+    {
+      type: "brightness",
+      value: brightness,
+    },
+    {
+      type: "hue-rotate",
+      value: hueRange,
+    },
+    {
+      type: "grayscale",
+      value: grayscaleRange,
+    },
+  ];
+
   return (
     <Wrapper>
       <Header headerHeight={headerHeight}>
@@ -55,10 +75,16 @@ export const ImageModifierComponent = (props) => {
       </Header>
       <Body headerHeight={headerHeight}>
         <ImageWrapper>
-          <ImageComponent src={props.img} />
+          <ImageComponent src={props.img} filterList={filterList} />
         </ImageWrapper>
         <InputsWrapper>
-          <SidebarModifier src={props.img} />
+          <SidebarModifier
+            src={props.img}
+            filterList={filterList}
+            setBrightness={setBrightness}
+            setHueRange={setHueRange}
+            setGrayscaleRange={setGrayscaleRange}
+          />
         </InputsWrapper>
       </Body>
     </Wrapper>

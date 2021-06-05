@@ -26,12 +26,12 @@ const Body = styled.div`
   height: ${({ headerHeight }) => `calc(100% - ${headerHeight}px)`};
   width: 100%;
   display: flex;
+  flex-direction: column;
   /* justify-content: space-between;
   align-items: center; */
 `;
 
 export const SidebarModifier = (props) => {
-  console.log(props.src, "DALLA SIDEBAR");
   return (
     <Wrapper>
       <HeaderWrapper>
@@ -44,8 +44,29 @@ export const SidebarModifier = (props) => {
         </TypographyComponent>
       </HeaderWrapper>
       <Body>
-        <DropdownComponent>
-          <InputRangeComponent cristo="SONO QUI" />
+        <DropdownComponent typeName="Luce">
+          <InputRangeComponent
+            img={props.src}
+            onChange={(e) => {
+              props.setBrightness(e.target.value * 2);
+            }}
+          />
+        </DropdownComponent>
+        <DropdownComponent typeName="Colore">
+          <InputRangeComponent
+            img={props.src}
+            onChange={(e) => {
+              props.setHueRange(e.target.value);
+            }}
+          />
+        </DropdownComponent>
+        <DropdownComponent typeName="Scala di grigi">
+          <InputRangeComponent
+            img={props.src}
+            onChange={(e) => {
+              props.setGrayscaleRange(e.target.value);
+            }}
+          />
         </DropdownComponent>
       </Body>
     </Wrapper>
