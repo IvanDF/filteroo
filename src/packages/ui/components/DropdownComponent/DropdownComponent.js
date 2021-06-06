@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  IconComponent,
-  Rgba,
-  InputRangeComponent,
-  TypographyComponent,
-} from "../../index";
+import { IconComponent, Rgba, TypographyComponent } from "../../index";
 import { Theme } from "../ThemeComponent/Theme";
 
 const Wrapper = styled.div`
   display: flex;
-  background: ${Theme.color.bg};
+  padding: 8px 0;
+  border-bottom: solid ${Rgba(Theme.color.primary, Theme.opacity.o3)} 1px;
 `;
 
 const Dropdown = styled.div`
@@ -72,7 +68,7 @@ export const DropdownComponent = (props) => {
     <Wrapper>
       <IconWrapper isOpen={isOpen} onClick={isOpenHandler}>
         <IconComponent
-          name="CHEVRON"
+          name={"CHEVRON"}
           height={14}
           width={14}
           primaryColor={Theme.color.primary}
@@ -82,7 +78,7 @@ export const DropdownComponent = (props) => {
         <DropdownHeader>
           <DropdownTitle onClick={isOpenHandler}>
             <IconComponent
-              name="BRIGHTNESS"
+              name={props.iconName}
               height={14}
               width={14}
               primaryColor={Theme.color.primary}

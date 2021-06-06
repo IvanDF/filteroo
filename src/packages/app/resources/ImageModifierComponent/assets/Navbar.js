@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import {
   ButtonComponent,
@@ -26,10 +26,6 @@ const Download = styled.a`
 
 const Navbar = (props) => {
   const [imageTitle, setImageTitle] = useState();
-  // let [imageTitle] = useState("Senza Nome");
-  // let imageTitle = "";
-
-  useEffect(() => {}, []);
 
   return (
     <Nav>

@@ -19,19 +19,24 @@ const ImageWrapper = styled.div`
     width: 20%;
     object-fit: cover;
     &:nth-child(1) {
-      filter: grayscale(16%);
+      filter: ${({ type }) =>
+        `${type}(${type === "hue-rotate" ? "72deg" : "16%"})`};
     }
     &:nth-child(2) {
-      filter: grayscale(32%);
+      filter: ${({ type }) =>
+        `${type}(${type === "hue-rotate" ? "144deg" : "32%"})`};
     }
     &:nth-child(3) {
-      filter: grayscale(48%);
+      filter: ${({ type }) =>
+        `${type}(${type === "hue-rotate" ? "216deg" : "48%"})`};
     }
     &:nth-child(4) {
-      filter: grayscale(64%);
+      filter: ${({ type }) =>
+        `${type}(${type === "hue-rotate" ? "288deg" : "64%"})`};
     }
     &:nth-child(5) {
-      filter: grayscale(80%);
+      filter: ${({ type }) =>
+        `${type}(${type === "hue-rotate" ? "360deg" : "80%"})`};
     }
   }
 `;
@@ -69,14 +74,19 @@ const Input = styled.input`
 export const InputRangeComponent = (props) => {
   return (
     <Wrapper>
-      <ImageWrapper>
+      <ImageWrapper type={props.type}>
         <ImageComponent src={props.img} />
         <ImageComponent src={props.img} />
         <ImageComponent src={props.img} />
         <ImageComponent src={props.img} />
         <ImageComponent src={props.img} />
       </ImageWrapper>
-      <Input type="range" onChange={props.onChange} />
+      <Input
+        type="range"
+        onChange={props.onChange}
+        min={props.min}
+        max={props.max}
+      />
     </Wrapper>
   );
 };

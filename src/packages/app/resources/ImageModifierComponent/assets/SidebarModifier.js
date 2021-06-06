@@ -27,11 +27,13 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between;
-  align-items: center; */
 `;
 
 export const SidebarModifier = (props) => {
+  const changeValueHandler = (e, value) => {
+    value(e);
+  };
+
   return (
     <Wrapper>
       <HeaderWrapper>
@@ -44,30 +46,25 @@ export const SidebarModifier = (props) => {
         </TypographyComponent>
       </HeaderWrapper>
       <Body>
-        <DropdownComponent typeName="Luce">
-          <InputRangeComponent
-            img={props.src}
-            onChange={(e) => {
-              props.setBrightness(e.target.value * 2);
-            }}
-          />
-        </DropdownComponent>
-        <DropdownComponent typeName="Colore">
-          <InputRangeComponent
-            img={props.src}
-            onChange={(e) => {
-              props.setHueRange(e.target.value);
-            }}
-          />
-        </DropdownComponent>
-        <DropdownComponent typeName="Scala di grigi">
-          <InputRangeComponent
-            img={props.src}
-            onChange={(e) => {
-              props.setGrayscaleRange(e.target.value);
-            }}
-          />
-        </DropdownComponent>
+        {props.filterList.map((el, i) => {
+          return (
+            <DropdownComponent
+              typeName={el.typeName}
+              iconName={el.iconName}
+              key={i}
+            >
+              <InputRangeComponent
+                type={el.type}
+                img={props.src}
+                min={el.min}
+                max={el.max}
+                onChange={(e) => {
+                  changeValueHandler(e.target.value, el.setValue);
+                }}
+              />
+            </DropdownComponent>
+          );
+        })}
       </Body>
     </Wrapper>
   );
