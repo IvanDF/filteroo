@@ -50,14 +50,14 @@ const DropdownBody = styled.div`
   overflow: hidden;
 `;
 
-const DropdownUndo = styled.div`
-  // SE C'È UNA MODIFICA DIVENTA CLICCABILE
-  svg {
-    fill: ${Rgba(Theme.color.cta, Theme.opacity.o5)};
-    position: relative;
-    top: 3px;
-  }
-`;
+// const DropdownUndo = styled.div`
+//   // SE C'È UNA MODIFICA DIVENTA CLICCABILE
+//   svg {
+//     fill: ${Rgba(Theme.color.cta, Theme.opacity.o5)};
+//     position: relative;
+//     top: 3px;
+//   }
+// `;
 
 export const DropdownComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -90,9 +90,9 @@ export const DropdownComponent = (props) => {
               {props.typeName}
             </TypographyComponent>
           </DropdownTitle>
-          <DropdownUndo>
+          {/* <DropdownUndo>
             <IconComponent name="UNDO" height={14} width={14}></IconComponent>
-          </DropdownUndo>
+          </DropdownUndo> */}
         </DropdownHeader>
         <DropdownBody isOpen={isOpen}>{props.children}</DropdownBody>
       </Dropdown>

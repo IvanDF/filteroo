@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React /*, { useState } */ from "react";
 import styled from "styled-components";
 import {
-  ButtonComponent,
+  // ButtonComponent,
   IconComponent,
-  InputComponent,
+  // InputComponent,
   Theme,
 } from "../../../../ui";
 
@@ -20,12 +20,12 @@ const Nav = styled.nav`
   }
 `;
 
-const Download = styled.a`
-  text-decoration: none;
-`;
+// const Download = styled.a`
+//   text-decoration: none;
+// `;
 
 const Navbar = (props) => {
-  const [imageTitle, setImageTitle] = useState();
+  // const [imageTitle, setImageTitle] = useState();
 
   return (
     <Nav>
@@ -37,7 +37,7 @@ const Navbar = (props) => {
         secondaryColor={Theme.color.bg}
         onClick={() => window.location.reload()}
       />
-      <InputComponent
+      {/* <InputComponent
         center={true}
         styleNone={true}
         placeholder={"Inserisci Nome immagine"}
@@ -53,7 +53,7 @@ const Navbar = (props) => {
         >
           Scarica
         </ButtonComponent>
-      </Download>
+      </Download> */}
     </Nav>
   );
 };
