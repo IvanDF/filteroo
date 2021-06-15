@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ImageComponent, Theme } from "../../../ui";
 import Navbar from "./assets/Navbar";
@@ -8,8 +8,6 @@ const Wrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  /* justify-content: space-between;
-  align-items: center; */
   flex-direction: column;
 `;
 
