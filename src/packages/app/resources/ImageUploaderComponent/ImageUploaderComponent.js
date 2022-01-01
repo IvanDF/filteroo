@@ -1,10 +1,10 @@
-import styled from "styled-components";
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import {
-  TypographyComponent,
-  InputComponent,
   IconComponent,
+  InputComponent,
   Theme,
+  TypographyComponent,
 } from "../../../ui";
 
 const Wrapper = styled.div`
@@ -64,8 +64,8 @@ export const ImageUploaderComponent = (props) => {
               primaryColor={Theme.color.primary}
             />
             <TypographyComponent
-              color={Theme.color.warnng}
-              colorHovered={Theme.color.whithe}
+              color={Theme.color.primary}
+              colorHovered={Theme.color.white}
               fontSize={Theme.font.s32}
               fontWeight={Theme.font.w700}
               pointer={true}

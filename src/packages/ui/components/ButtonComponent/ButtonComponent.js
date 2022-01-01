@@ -14,11 +14,15 @@ const Button = styled.button`
   text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : "none")};
   outline: none;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  transition: all 300ms ease;
+  transition: all 200ms ease;
+  ${({ disabled }) =>
+    !disabled &&
+    `
   &:hover {
     color: ${Theme.color.bg};
     box-shadow: inset 0px 0px 15px ${Rgba(Theme.color.bg, Theme.opacity.o2)};
   }
+  `}
 `;
 
 export const ButtonComponent = (props) => {

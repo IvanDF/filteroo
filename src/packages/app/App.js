@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { ImageModifierComponent, ImageUploaderComponent } from "./resources";
 import { Theme } from "../ui";
+import { ImageModifierComponent, ImageUploaderComponent } from "./resources";
 
 const AppWrapper = styled.main`
   display: flex;
@@ -12,22 +12,24 @@ const AppWrapper = styled.main`
 `;
 
 const App = () => {
-  const [imageUploaded, setImageUploaded] = useState(false);
+  const [isimageUploaded, setIsImageUploaded] = useState(false);
   const [imageUpload, setImageUpload] = useState("");
+  const [imageTitle, setImageTitle] = useState("");
 
   let ImageHandler = (e) => {
     if (e) {
-      e && setImageUploaded(!imageUploaded);
+      e && setIsImageUploaded(!isimageUploaded);
       let image = e.target.files[0];
       let img = URL.createObjectURL(image);
       setImageUpload(img);
+      setImageTitle(image.name);
     }
   };
 
   return (
     <AppWrapper>
-      {imageUploaded ? (
-        <ImageModifierComponent img={imageUpload} />
+      {isimageUploaded ? (
+        <ImageModifierComponent img={imageUpload} imgTitle={imageTitle} />
       ) : (
         <ImageUploaderComponent change={ImageHandler} />
       )}

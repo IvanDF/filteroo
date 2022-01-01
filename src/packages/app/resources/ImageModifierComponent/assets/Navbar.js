@@ -18,11 +18,9 @@ const Nav = styled.nav`
   svg {
     cursor: pointer;
   }
-  & > div {
-    width: 80%;
-    input {
-      width: 100%;
-    }
+  input {
+    flex-grow: 1;
+    padding: 0 20px;
   }
 `;
 
@@ -30,8 +28,9 @@ const Download = styled.a`
   text-decoration: none;
 `;
 
-const Navbar = (props) => {
-  const [imageTitle, setImageTitle] = useState();
+const Navbar = ({ downloadLink, imgTitle }) => {
+  const splitExtension = imgTitle.split(".", 1);
+  const [imageTitle, setImageTitle] = useState(splitExtension);
 
   useEffect(() => {
     imageTitle && (document.title = imageTitle);
@@ -50,16 +49,18 @@ const Navbar = (props) => {
       <InputComponent
         center={true}
         styleNone={true}
+        value={imageTitle}
         placeholder={"Inserisci Nome immagine"}
         onChange={(e) => {
           setImageTitle(e.target.value);
         }}
       />
-      <Download href={props.download} download={imageTitle}>
+      <Download href={downloadLink} download={imageTitle}>
         <ButtonComponent
           color={Theme.color.bg}
           bgColor={Theme.color.cta}
           isUpper={true}
+          isDisabled={imageTitle.length === 0}
         >
           Scarica
         </ButtonComponent>

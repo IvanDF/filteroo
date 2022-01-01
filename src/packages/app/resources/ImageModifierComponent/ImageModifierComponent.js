@@ -44,7 +44,7 @@ const InputsWrapper = styled.aside`
   border-left: 1px ${Theme.color.black} solid;
 `;
 
-export const ImageModifierComponent = (props) => {
+export const ImageModifierComponent = ({ img, imgTitle }) => {
   const headerHeight = 50;
 
   const [hueRange, setHueRange] = useState(0);
@@ -114,14 +114,14 @@ export const ImageModifierComponent = (props) => {
   return (
     <Wrapper>
       <Header headerHeight={headerHeight}>
-        <Navbar download={props.img} />
+        <Navbar downloadLink={img} imgTitle={imgTitle} />
       </Header>
       <Body headerHeight={headerHeight}>
         <ImageWrapper>
-          <ImageComponent src={props.img} filterList={filterList} />
+          <ImageComponent src={img} filterList={filterList} />
         </ImageWrapper>
         <InputsWrapper>
-          <SidebarModifier src={props.img} filterList={filterList} />
+          <SidebarModifier src={img} filterList={filterList} />
         </InputsWrapper>
       </Body>
     </Wrapper>

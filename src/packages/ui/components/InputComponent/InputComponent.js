@@ -1,8 +1,7 @@
+import { Fragment } from "react";
 import styled from "styled-components";
 import { Rgba } from "../RgbaComponent/Rgba";
 import { Theme } from "../ThemeComponent/Theme";
-
-const Wrapper = styled.div``;
 
 const Input = styled.input`
   outline: none;
@@ -30,7 +29,7 @@ const Label = styled.label`
 
 export const InputComponent = (props) => {
   return (
-    <Wrapper>
+    <Fragment>
       <Label htmlFor={props.name}>{props.label}</Label>
       <Input
         center={props.center}
@@ -43,6 +42,6 @@ export const InputComponent = (props) => {
         accept={props.accept}
         placeholder={props.placeholder}
       />
-    </Wrapper>
+    </Fragment>
   );
 };
