@@ -19,6 +19,7 @@
 - [CSS](https://www.w3.org/TR/CSS/) - Page Style
 - [JavaScript](https://www.javascript.com/) - Logic
 - [React](https://it.reactjs.org) - Library
+  - [Styled Components](https://styled-components.com) - React utility for CSS
 
 ## ✍️ Authors <a name = "authors"></a>
 
